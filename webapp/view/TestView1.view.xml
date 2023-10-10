@@ -1,0 +1,57 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="demo.project1061023.controller.TestView1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"  xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content >
+            <form:SimpleForm id="SimpleForm1"  title="Task 1" >
+                <Label id="LabelId2" text="{i18n>fname}" labelFor="idText2" />
+                <Text  id="idText2" text="{employees>FirstName}" />
+
+                <Label id="LabelId3" text="{i18n>lname}" labelFor="idText3" />
+                <Text  id="idText3" text="{employees>LastName}" />
+
+                <Label id="LabelId4" text="{i18n>age}" labelFor="idText4" />
+                <Text  id="idText4" text="{employees>Age}" />
+
+               <!-- <Input id="idInput1"  value="" placeholder="Please enter your name..." change="onChangeName" /> -->
+            </form:SimpleForm>
+             <Table id="TableId" headerText="Task 2" columns = "{tableColumns>/}" items="{products>/products}" >
+                <columns>
+                <Column id="idTableColumns">
+                    <Label id="idTableColumn" text="{tableColumns>name}" />
+                </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="colListItems"  press="onListSelected" type="Active" >
+                        <Text id="txtItem1" text="{products>ProductId}" />
+                        <Text id="txtItem2" text="{products>MainCategory}" />
+                        <Text id="txtItem3" text="{products>Volume}" />
+                    </ColumnListItem>
+                </items>
+                   <!-- <Column id="column1ID">
+                        <header>
+                            <Label id="columnLabel1" text="Product ID"/>
+                        </header>
+                    </Column>
+                    <Column id="column2ID">
+                        <header>
+                            <Label id="columnLabel2" text="Category"/>
+                        </header>
+                    </Column>
+                    <Column id="column3ID">
+                        <header>
+                            <Label id="columnLabel3" text="Volume"/>
+                        </header>
+                    </Column> -->
+            </Table>
+            <core:Fragment fragmentName="demo.project1061023.fragments.MyForm" type="XML" />
+        </content>
+    </Page>
+</mvc:View>
+
+<!-- Task 1: Use Binding in the Controller, replace binding property from SimpleForm 
+     Task 2: Calculate volume for each product. Use forEach loop and display the volume for the 3 products to the view.
+     Task for Tuesday: (1) handle press event of ColumnListItem
+                       (2) when the event triggers, then the data of product /0/ will be shown in form inside fragment
+                       hint: use .bindElement()
+                       bonus point: display the product data that got selected  -->

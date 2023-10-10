@@ -1,0 +1,25 @@
+{
+"people": [
+    {
+        "FirstName": "Vasilis",
+        "LastName": "Kiosses",
+        "Residence": "Filadelfeia",
+        "Age": "26",
+        "OwnsACar": true
+    },
+    {
+        "FirstName": "Petros",
+        "LastName": "Tsolakis",
+        "Residence": "Thessaloniki",
+        "Age": "33",
+        "OwnsACar": false
+    },
+    {
+        "FirstName": "Sergio",
+        "LastName": "Araujo",
+        "Residence": "Las Palmas",
+        "Age": "29",
+        "OwnsACar": true
+    }
+ ]
+}

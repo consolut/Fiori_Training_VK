@@ -1,0 +1,28 @@
+ <core:FragmentDefinition xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" >
+    <form:SimpleForm id="SimpleForm2"  title="Task 3" editable="true"  >
+                <Label id="LabelId22" text="{i18n>ProductName}" labelFor="idText22" />
+                <Input  id="idText22" value="{products>ProductId}" />
+
+                <Label id="LabelId32" text="{i18n>Category}" labelFor="idText32" />
+                <Input  id="idText32" value="{products>MainCategory}" />
+
+                 <Label id="LabelId42" text="{i18n>dwidth}" labelFor="idText42" />
+                <Input  id="idText42" type="Number" value="{products>DimensionWidth}" change="onChangeDimensions"
+                 valueState="{= ${products>DimensionWidth} > 0 || ${products>DimensionWidth} === null ? 'None' : 'Error' }"
+                 valueStateText="{= ${products>DimensionWidth} > 0 || ${products>DimensionWidth} === null ? 'None' : ${i18n>PositiveNumber} }"/>
+
+                <Label id="LabelId52" text="{i18n>dheight}" labelFor="idText52" />
+                <Input  id="idText52" type="Number" value="{products>DimensionHeight}" change="onChangeDimensions" 
+                valueState="{path: 'products>DimensionHeight', formatter: '.formatter.setValueState'}"
+                valueStateText="{path: 'products>DimensionHeight', formatter: '.formatter.setValueStateText'}" />
+<!--             valueState="{= ${products>DimensionHeight} > 0 || ${products>DimensionHeight} === null ? 'None' : 'Error' }"
+                valueStateText="{= ${products>DimensionWidth} > 0 || ${products>DimensionWidth} === null ? 'None' : ${i18n>PositiveNumber} }" -->
+                <Label id="LabelId62" text="{i18n>ddepth}" labelFor="idText62" />
+                <Input  id="idText62" type="Number" value="{products>DimensionDepth}" change="onChangeDimensions" 
+                valueState="{= ${products>DimensionDepth} > 0 || ${products>DimensionDepth} === null ? 'None' : 'Error' }"
+                valueStateText="{= ${products>DimensionWidth} > 0 || ${products>DimensionWidth} === null ? 'None' : ${i18n>PositiveNumber} }"/>
+
+                <Label id="LabelId72" text="{i18n>Volume}" labelFor="idText72" />
+                <Input  id="idText72" value="{products>Volume}" />
+    </form:SimpleForm>
+</core:FragmentDefinition>
