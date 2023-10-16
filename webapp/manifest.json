@@ -91,6 +91,11 @@
           "target": [
             "TargetTestView1"
           ]
+        },
+        {
+          "name": "RouteNavigation",
+          "pattern": "product/{id}",
+          "target" : ["product"]
         }
       ],
       "targets": {
@@ -100,6 +105,10 @@
           "clearControlAggregation": false,
           "viewId": "TestView1",
           "viewName": "TestView1"
+        },
+        "product" : {
+          "viewId": "Navigation",
+          "viewName": "Navigation"
         }
       }
     },

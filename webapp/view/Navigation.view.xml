@@ -1,0 +1,9 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="demo.project1061023.controller.Navigation"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"  xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content >
+            <core:Fragment fragmentName="demo.project1061023.fragments.MyForm" type="XML" />
+        </content>
+    </Page>
+</mvc:View>

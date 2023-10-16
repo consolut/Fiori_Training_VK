@@ -22,7 +22,7 @@
                 </Column>
                 </columns>
                 <items>
-                    <ColumnListItem id="colListItems"  press="onListSelected" type="Active" >
+                    <ColumnListItem id="colListItems"  press="onItemNavigation" type="Navigation" >
                         <Text id="txtItem1" text="{products>ProductId}" />
                         <Text id="txtItem2" text="{products>MainCategory}" />
                         <Text id="txtItem3" text="{products>Volume}" />

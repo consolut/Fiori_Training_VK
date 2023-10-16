@@ -111,6 +111,7 @@ sap.ui.define([
 
                 var oProductsData = new JSONModel(oData);
                 this.getView().setModel(oProductsData, "products");
+                this.getOwnerComponent().setModel(oProductsData, "products");
 
                 var oProductModel = this.getView().getModel("products");
 
@@ -142,6 +143,14 @@ sap.ui.define([
                var obindingContext = oEvent.getSource().getBindingContext("products");
                 var sPath = obindingContext.getPath();
                this.getView().byId("SimpleForm2").bindElement("products>" + sPath);
+            },
+
+            onItemNavigation: function(oEvent) {
+                var sProductPath = oEvent.getSource().getBindingContext("products").getPath();
+                var sProductId = sProductPath.split("/")[2];
+
+                var oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteNavigation",{"id": sProductId});
             },
 
             onChangeDimensions: function(oEvent) {
